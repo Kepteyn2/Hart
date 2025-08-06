@@ -22,4 +22,8 @@ endmap
 map byosfinal
 	votable
 	#voteweight 1
+
+map heartfelt
+	votable
+	#voteweight 5
 endmap
