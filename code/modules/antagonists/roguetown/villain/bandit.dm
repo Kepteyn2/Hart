@@ -51,6 +51,8 @@
 /datum/antagonist/bandit/proc/move_to_spawnpoint()
 	if(SSmapping && SSmapping.config && SSmapping.config.map_name == "Build Your Settlement" && GLOB.bandit_starts_byos && GLOB.bandit_starts_byos.len)
 		owner.current.forceMove(pick(GLOB.bandit_starts_byos))
+	else if(SSmapping && SSmapping.config && SSmapping.config.map_name == "Heartfelt" && GLOB.bandit_starts_heartfelt && GLOB.bandit_starts_heartfelt.len)
+		owner.current.forceMove(pick(GLOB.bandit_starts_heartfelt))
 	else
 		owner.current.forceMove(pick(GLOB.bandit_starts))
 

@@ -108,6 +108,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	delete_after_roundstart = FALSE
 	map = "Build Your Settlement"
 
+/obj/effect/landmark/start/banditlate_heartfelt
+	name = "Bandit Heartfelt"
+	icon_state = "arrow"
+	jobspawn_override = list("Bandit")
+	delete_after_roundstart = FALSE
+	map = "Heartfelt"
 
 /obj/effect/landmark/start/bogguardlate
 	name = "Bogguardlate"
@@ -570,6 +576,16 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	GLOB.bandit_starts_byos += loc
 	return INITIALIZE_HINT_QDEL
 
+/obj/effect/landmark/start/bandit_heartfelt
+	name = "bandit_heartfelt"
+	icon = 'icons/mob/landmarks.dmi'
+	icon_state = "arrow"
+	map = "Heartfelt"
+
+/obj/effect/landmark/start/bandit_heartfelt/Initialize()
+	..()
+	GLOB.bandit_starts_heartfelt += loc
+	return INITIALIZE_HINT_QDEL
 
 /obj/effect/landmark/start/delf
 	name = "delf"
